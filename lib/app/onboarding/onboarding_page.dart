@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:go_router/go_router.dart';
 import 'package:smart_pay/app/onboarding/widgets/current_item_indicator.dart';
 import 'package:smart_pay/app/onboarding/widgets/onboard_item.dart';
 import 'package:smart_pay/app/shared_widgets/custom_elevated_button.dart';
 import 'package:smart_pay/models/onboard.dart';
-import 'package:smart_pay/utils/color_scheme.dart';
 import 'package:smart_pay/utils/constants.dart';
 
 import 'widgets/onboard_data.dart';
@@ -36,7 +36,6 @@ class _OnboardingPageState extends State<OnboardingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Padding(
         padding: commonPadding,
         child: Column(
@@ -74,7 +73,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
                   const SizedBox(height: 34.0),
                   CustomElevatedButton(
                     text: 'Get Started',
-                    onPressed: () {},
+                    onPressed: () => context.goNamed('signin'),
                   ),
                 ],
               ),

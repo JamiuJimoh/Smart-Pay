@@ -19,7 +19,7 @@ class AppTheme {
       letterSpacing: 0.3,
     ),
     subtitle1: GoogleFonts.roboto(
-      color: kSecondaryColor,
+      color: kSubtitleColor,
       fontWeight: FontWeight.w400,
       fontSize: 16.0,
       letterSpacing: 0.3,
@@ -52,13 +52,13 @@ class AppTheme {
 
   static light() {
     return ThemeData(
-      scaffoldBackgroundColor: kScaffoldBackgroundColor,
+      scaffoldBackgroundColor: Colors.white,
       textTheme: lightTextTheme,
       appBarTheme: const AppBarTheme().copyWith(
         elevation: 0.0,
-        color: kScaffoldBackgroundColor,
+        color: Colors.white,
         systemOverlayStyle: const SystemUiOverlayStyle(
-          statusBarColor: kScaffoldBackgroundColor,
+          statusBarColor: Colors.white,
           statusBarIconBrightness: Brightness.dark,
           statusBarBrightness: Brightness.light,
         ),

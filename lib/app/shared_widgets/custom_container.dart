@@ -48,6 +48,7 @@ class CustomContainer extends StatelessWidget {
                   topRight: Radius.circular(topRightRadius ?? radius!),
                 ),
           color: containerColor,
+          border: borderColor != null ? Border.all(color: borderColor!) : null,
         ),
         child: child,
       ),
