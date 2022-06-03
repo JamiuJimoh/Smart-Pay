@@ -1,16 +1,20 @@
 # smart_pay
 
-A new Flutter project.
+A technical 'take-home' from Apex Network.
 
-## Getting Started
+### Features Added
 
-This project is a starting point for a Flutter application.
+- Onboarding screen
+- Sign In & Sign Up auth flow
+- HomePage
+- Form validation
+- Pin page resend button timer
 
-A few resources to get you started if this is your first Flutter project:
+### Problems Encountered
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- The API was confusing at first because there was a discrepancy between it and the UI. According to the API, you need to verify your email with an OTP before you can register.
+- The OTP is not sent to the mail provided, you can only get it from the response of the request.
+- I could find a more efficient way for my implementation of the country picker but given the short time, I could not come up with one. The country picker is a little bit laggy, due to the fact that i'm displaying all countries at once.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# NB:-
+I couldn't finish the whole task, due to the shortage of time. A task I couldn't finish is the one where you can close the app while still logged in and opening the app to get to the PIN page to unlock the home page.
