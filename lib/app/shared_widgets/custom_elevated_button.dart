@@ -12,6 +12,7 @@ class CustomElevatedButton extends StatelessWidget {
     this.color,
     this.disabledColor,
     this.padding,
+    this.isLoading = false,
     this.borderColor,
   }) : super(key: key);
   final VoidCallback? onPressed;
@@ -21,6 +22,7 @@ class CustomElevatedButton extends StatelessWidget {
   final double radius;
   final Color? color;
   final Color? disabledColor;
+  final bool? isLoading;
   final EdgeInsetsGeometry? padding;
   final Color? borderColor;
 
@@ -54,13 +56,16 @@ class CustomElevatedButton extends StatelessWidget {
           ),
         ),
         onPressed: onPressed,
-        child: Text(
-          text,
-          style: Theme.of(context)
-              .textTheme
-              .headline5
-              ?.copyWith(color: Colors.white),
-        ),
+        child: isLoading!
+            ? const Center(
+                child: CircularProgressIndicator(color: Colors.white))
+            : Text(
+                text,
+                style: Theme.of(context)
+                    .textTheme
+                    .headline5
+                    ?.copyWith(color: Colors.white),
+              ),
       ),
     );
   }

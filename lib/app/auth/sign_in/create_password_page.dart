@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:smart_pay/app/shared_widgets/custom_appbar.dart';
 import 'package:smart_pay/app/shared_widgets/custom_elevated_button.dart';
 import 'package:smart_pay/app/shared_widgets/custom_text_field.dart';
 import 'package:smart_pay/app/shared_widgets/page_title.dart';
 import 'package:smart_pay/utils/constants.dart';
 
-class PasswordRecoveryPage extends StatelessWidget {
-  const PasswordRecoveryPage({Key? key}) : super(key: key);
+class CreateNewPasswordPage extends StatelessWidget {
+  const CreateNewPasswordPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,20 +21,26 @@ class PasswordRecoveryPage extends StatelessWidget {
               children: const [
                 SizedBox(height: 6.0),
                 PageTitle(
-                  title: 'Password Recovery',
+                  title: 'Create New Password',
                   description:
-                      'Enter your registered email below to receive password instructions',
+                      'Please, enter a new password below different from the previous password',
                   spaceBetween: 12.0,
                 ),
                 SizedBox(height: 32.0),
                 CustomTextField(
-                  hint: 'Email',
+                  hint: 'Password',
+                  obscureText: true,
+                ),
+                SizedBox(height: 16.0),
+                CustomTextField(
+                  hint: 'Confirm Password',
+                  obscureText: true,
                 ),
               ],
             ),
-            CustomElevatedButton(
-              text: 'Send verification code',
-              onPressed: () => context.pushNamed('new_password_page'),
+            const CustomElevatedButton(
+              text: 'Create new password',
+              onPressed: null,
             ),
           ],
         ),
